@@ -1,0 +1,134 @@
+.navbar{
+   
+    width: 100%;
+    height: 100%;
+    background-color:  #121619;
+     display: flex;
+    flex-direction: row;
+    border-bottom: white 300 px; 
+}
+
+.navbar .leftSide {
+    flex : 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.navbar .leftSide img {
+    width: 20%;
+}
+
+.navbar .rightSide{
+    flex : 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 5%;
+    font-size: 20px;
+}
+
+.navbar .rightSide button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .rightSide svg{
+    font-size: 40px;
+}
+
+.navbar #open{
+    padding-left: 0px;
+}
+.navbar #open img{
+    display: none;;
+}
+
+.navbar #close img{
+    display: inherit;
+}
+
+.navbar #open .hiddenLinks{
+    display: inherit;
+    margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+    display: none;
+}
+
+.navbar #open a{
+    width: 70px;
+    margin: 5px;
+}
+
+@media only screen and (max-width : 900px){
+    .navbar .rightSide a{
+        width: 70px;
+    }
+    .navbar .leftSide{
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .leftSide {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .leftSide img {
+        width: 20%;
+        margin-left: -90%;
+        margin-bottom: 10px;
+    }
+    .hiddenLinks {
+        display: ${openLinks ? 'flex' : 'none'};
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .navbar .rightSide a{
+        display: none;
+    }
+    .navbar .rightSide {
+        justify-content: flex-end;
+        padding-right: 50px;
+        margin-left: 90%;
+        margin-top: 5px;
+    }
+    .navbar .rightSide button {
+        display: flex;
+        margin-top: -105px;
+    }
+    
+}
+
+@media only screen and (min-width : 600px){
+    .navbar .rightSide button {
+        display: none;
+    }
+
+    .hiddenLinks{
+        display: none;
+    }
+}
+
